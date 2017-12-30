@@ -3,14 +3,12 @@ package com.village.main;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.village.components.Village;
 
 public class Game implements ApplicationListener{
 	
 	private Village village;
-	
 	
 	private Stage stage;
 	
