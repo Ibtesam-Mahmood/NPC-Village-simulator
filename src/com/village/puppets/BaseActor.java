@@ -1,10 +1,12 @@
 package com.village.puppets;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.village.main.Main;
 
 
 public class BaseActor extends Actor
@@ -25,7 +27,7 @@ public class BaseActor extends Actor
         velocityY = 0;
     }
     
-    public BaseActor(float x, float y, float w, float h, Texture t)
+    public BaseActor(float x, float y, float w, float h)
     {
         super();
         region = new TextureRegion();
@@ -34,7 +36,19 @@ public class BaseActor extends Actor
         velocityY = 0;
         setPosition(x, y);
         setBounds(w, h);
-        setTexture(t);
+        setTexture( new Texture(Gdx.files.internal("resources/box.png")) );
+    }
+    
+    public BaseActor(float x, float y, float r)
+    {
+        super();
+        region = new TextureRegion();
+        boundary = new Rectangle();
+        velocityX = 0;
+        velocityY = 0;
+        setPosition(x, y);
+        setBounds(r*2, r*2);
+        setTexture( new Texture(Gdx.files.internal("resources/circle.png")) );
     }
         
     

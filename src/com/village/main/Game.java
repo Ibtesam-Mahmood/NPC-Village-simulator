@@ -11,17 +11,16 @@ public class Game implements ApplicationListener{
 	
 	private Village village;
 	
-	private SpriteBatch batch;
 	
 	private Stage stage;
 	
 	public void create() {
-		village =  new Village(20, 20, 20, 20);
-		batch = new SpriteBatch();
+		village =  new Village(40, 40, 40, 40);
 		stage =  new Stage();
 		
 		stage.addActor(village);
 		
+		village.addVillager(100,  100);
 	}
 
 	public void tick(float dt) {
